@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Dashboard | Smart Scheduler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/workspace.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body>
+    <div class="mobile-bar"><strong>Student</strong><button class="icon-button" id="sidebarToggle" type="button" aria-label="Open menu">☰</button></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="../index.html"><span class="brand-icon">🎓</span><span>Smart Scheduler</span></a>
+            <nav>
+                <a class="nav-link active" href="#overview">Overview</a>
+                <a class="nav-link" href="#timetable">Weekly grid</a>
+                <a class="nav-link" href="#notifications">Notifications <span id="navUnread" class="nav-count">0</span></a>
+                <a class="nav-link" href="../faculty/dashboard.html" id="facultyViewLink" hidden>Faculty view</a>
+                <a class="nav-link" href="../index.html" id="logoutBtn">Log out</a>
+            </nav>
+            <div class="sidebar-note">Returning students skip onboarding and land here.</div>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">STUDENT</p>
+                    <h1>Hello, <span id="userName">Student</span></h1>
+                    <p id="welcomeDescription">Your published batch timetable — subject, faculty, room or lab.</p>
+                </div>
+                <div class="app-top-tools">
+                    <span id="todayLabel" class="date-label"></span>
+                    <div class="bell-wrap">
+                        <button class="bell-button" id="bellButton" type="button" aria-label="Notifications">🔔<span class="bell-dot" id="bellDot"></span></button>
+                        <div class="notif-panel" id="notifPanel"></div>
+                    </div>
+                    <button class="icon-button" id="themeToggle" type="button">◐</button>
+                </div>
+            </header>
+            <div id="changeBanner" class="notice" hidden>The timetable changed after a faculty leave. Check the grid below.</div>
+            <div id="emptyState" class="notice" hidden>Admin has not published a timetable for your batch yet. You will be notified when it is ready.</div>
+            <section id="overview" class="panel-section">
+                <div class="stats-grid">
+                    <article class="stat-card"><span>Weekly classes</span><strong id="classCount">0</strong><small>Published for your batch</small></article>
+                    <article class="stat-card"><span>Unread</span><strong id="unreadCount">0</strong><small>Leave / reschedule alerts</small></article>
+                    <article class="stat-card"><span>Batch</span><strong id="identityValue">—</strong><small>Linked after onboarding</small></article>
+                </div>
+                <section class="panel">
+                    <div class="panel-heading">
+                        <h2>Today</h2>
+                        <button class="button secondary" id="editProfileButton" type="button">Edit profile</button>
+                    </div>
+                    <div id="todayStrip" class="today-strip"></div>
+                </section>
+            </section>
+            <section id="timetable" class="panel-section">
+                <section class="panel">
+                    <h2>Weekly timetable</h2>
+                    <div class="table-wrap">
+                        <div class="week-grid" id="weekGrid"></div>
+                    </div>
+                </section>
+            </section>
+            <section id="notifications" class="panel-section">
+                <section class="panel">
+                    <div class="panel-heading">
+                        <h2>Notification center</h2>
+                        <button class="button secondary" id="markReadButton" type="button">Mark all read</button>
+                    </div>
+                    <div id="notificationList" class="item-list"></div>
+                </section>
+            </section>
+            <dialog id="profileDialog" class="profile-dialog">
+                <form id="profileForm" class="form-grid">
+                    <h2 class="full-width">Update year / division</h2>
+                    <p class="subtle full-width">Use this after promotion. Confirm — an audit log entry is stored.</p>
+                    <label>Year / class<input name="year" value="3" required></label>
+                    <label>Division<input name="division" list="studentDivisionOptions" value="A" required></label>
+                    <datalist id="studentDivisionOptions">
+                        <option value="A"></option>
+                        <option value="B"></option>
+                        <option value="C"></option>
+                        <option value="D"></option>
+                    </datalist>
+                    <div class="dialog-actions full-width">
+                        <button class="button secondary" type="button" id="cancelProfileEdit">Cancel</button>
+                        <button class="button primary" type="submit">Save</button>
+                    </div>
+                </form>
+            </dialog>
+            <footer class="app-footer">Member 1 · Student module · Polls notifications every 40s</footer>
+        </main>
+    </div>
+    <script src="../js/demo-store.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/shared.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/student.js"></script>
+</body>
+</html>

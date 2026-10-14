@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" fill="none">
+  <defs>
+    <linearGradient id="background" x1="20" y1="0" x2="680" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EDF4FF"/>
+      <stop offset="1" stop-color="#F5F1FF"/>
+    </linearGradient>
+    <filter id="shadow" x="53" y="39" width="620" height="410" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="12"/>
+      <feGaussianBlur stdDeviation="13"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 .13 0 0 0 0 .23 0 0 0 0 .43 0 0 0 .13 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect x="15" y="15" width="690" height="450" rx="32" fill="url(#background)"/>
+  <circle cx="640" cy="81" r="30" fill="#DCE8FF"/>
+  <circle cx="78" cy="400" r="19" fill="#E3DFFF"/>
+  <g filter="url(#shadow)">
+    <rect x="83" y="68" width="560" height="346" rx="20" fill="#fff"/>
+    <path d="M103 68h520a20 20 0 0 1 20 20v39H83V88a20 20 0 0 1 20-20Z" fill="#fff"/>
+    <rect x="103" y="85" width="23" height="23" rx="7" fill="#365FE8"/>
+    <path d="M109 91h12v11h-12zM112 88v5m6-5v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="134" y="101" fill="#17233F" font-family="Arial,sans-serif" font-size="12" font-weight="700">Smart Scheduler</text>
+    <rect x="441" y="87" width="101" height="20" rx="10" fill="#F1F4FA"/>
+    <circle cx="455" cy="97" r="3" fill="#43B581"/>
+    <rect x="463" y="94" width="65" height="6" rx="3" fill="#A3AEC2"/>
+    <circle cx="573" cy="97" r="10" fill="#E7ECF8"/>
+    <path d="M570 97a3 3 0 0 1 6 0v3h-6v-3Zm-1 3h8" stroke="#6A7892" stroke-width="1.3" stroke-linecap="round"/>
+    <rect x="103" y="143" width="520" height="1" fill="#E9EDF5"/>
+    <text x="107" y="169" fill="#192647" font-family="Arial,sans-serif" font-size="17" font-weight="700">Good morning, Alex</text>
+    <text x="107" y="187" fill="#8792A7" font-family="Arial,sans-serif" font-size="9">Here is what is happening today.</text>
+    <rect x="107" y="203" width="158" height="64" rx="11" fill="#F5F8FF"/>
+    <rect x="120" y="216" width="25" height="25" rx="8" fill="#E2EAFE"/>
+    <path d="M127 221v4m10-4v4m-12 3h14m-11-10h8a2 2 0 0 1 2 2v11h-12v-11a2 2 0 0 1 2-2Z" stroke="#4169E1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="154" y="222" fill="#7C879B" font-family="Arial,sans-serif" font-size="8">CLASSES TODAY</text>
+    <text x="154" y="245" fill="#17233F" font-family="Arial,sans-serif" font-size="19" font-weight="700">5</text>
+    <rect x="279" y="203" width="158" height="64" rx="11" fill="#F4FBF7"/>
+    <rect x="292" y="216" width="25" height="25" rx="8" fill="#DFF5E8"/>
+    <path d="M305 220a8 8 0 1 0 8 8" stroke="#2B9C62" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="m303 228 2 2 5-6" stroke="#2B9C62" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="326" y="222" fill="#7C879B" font-family="Arial,sans-serif" font-size="8">ATTENDANCE</text>
+    <text x="326" y="245" fill="#17233F" font-family="Arial,sans-serif" font-size="19" font-weight="700">92%</text>
+    <rect x="451" y="203" width="158" height="64" rx="11" fill="#FFF9ED"/>
+    <rect x="464" y="216" width="25" height="25" rx="8" fill="#FFF0D1"/>
+    <path d="M477 222v8m0 4h.01" stroke="#D89018" stroke-width="2" stroke-linecap="round"/>
+    <text x="498" y="222" fill="#7C879B" font-family="Arial,sans-serif" font-size="8">UPDATES</text>
+    <text x="498" y="245" fill="#17233F" font-family="Arial,sans-serif" font-size="19" font-weight="700">2 new</text>
+    <text x="107" y="293" fill="#192647" font-family="Arial,sans-serif" font-size="11" font-weight="700">Today's timetable</text>
+    <text x="541" y="293" fill="#4169E1" font-family="Arial,sans-serif" font-size="8" font-weight="700">VIEW WEEK</text>
+    <rect x="107" y="303" width="502" height="24" rx="6" fill="#F4F6FA"/>
+    <text x="119" y="319" fill="#7C879B" font-family="Arial,sans-serif" font-size="8" font-weight="700">TIME</text>
+    <text x="205" y="319" fill="#7C879B" font-family="Arial,sans-serif" font-size="8" font-weight="700">SUBJECT</text>
+    <text x="363" y="319" fill="#7C879B" font-family="Arial,sans-serif" font-size="8" font-weight="700">FACULTY</text>
+    <text x="496" y="319" fill="#7C879B" font-family="Arial,sans-serif" font-size="8" font-weight="700">ROOM</text>
+    <g font-family="Arial,sans-serif" font-size="9">
+      <text x="119" y="347" fill="#66728A">09:00</text><text x="205" y="347" fill="#192647" font-weight="700">Data Structures</text><text x="363" y="347" fill="#66728A">Dr. Ravi Kumar</text><text x="496" y="347" fill="#66728A">CR-201</text>
+      <text x="119" y="371" fill="#66728A">10:00</text><text x="205" y="371" fill="#192647" font-weight="700">Operating Systems</text><text x="363" y="371" fill="#66728A">Prof. Sneha</text><text x="496" y="371" fill="#66728A">CR-204</text>
+      <text x="119" y="395" fill="#66728A">11:15</text><text x="205" y="395" fill="#192647" font-weight="700">Database Lab</text><text x="363" y="395" fill="#66728A">Prof. Anil</text><text x="496" y="395" fill="#66728A">Lab-03</text>
+    </g>
+    <path d="M107 354h502M107 378h502" stroke="#EFF1F5"/>
+  </g>
+  <g>
+    <rect x="41" y="96" width="90" height="35" rx="11" fill="#fff"/>
+    <circle cx="58" cy="113.5" r="8" fill="#E1F5EA"/>
+    <path d="m55 113 2 2 4-4" stroke="#2B9C62" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="72" y="117" fill="#35415A" font-family="Arial,sans-serif" font-size="8" font-weight="700">IN SYNC</text>
+  </g>
+  <g>
+    <rect x="544" y="414" width="129" height="32" rx="11" fill="#fff"/>
+    <circle cx="562" cy="430" r="7" fill="#E9E5FF"/>
+    <path d="M562 426v4l3 2" stroke="#735DCE" stroke-width="1.3" stroke-linecap="round"/>
+    <text x="576" y="433" fill="#35415A" font-family="Arial,sans-serif" font-size="8" font-weight="700">LESS TIME PLANNING</text>
+  </g>
+</svg>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Onboarding | Smart Scheduler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/onboarding.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body class="onboarding-page">
+    <header class="topbar">
+        <div class="container nav-container">
+            <div class="logo">🎓 Smart Scheduler</div>
+            <div class="action-row">
+                <button class="btn btn-outline" id="themeToggle" type="button" aria-label="Switch to dark mode">◐</button>
+                <a href="../index.html" class="btn btn-outline" id="logoutLink">Logout</a>
+            </div>
+        </div>
+    </header>
+    <section class="onboarding">
+        <div class="container">
+            <div class="welcome-card">
+                <h1>Complete your academic profile</h1>
+                <p>Shown only on first login. Returning students go straight to the timetable.</p>
+            </div>
+            <div class="wizard-steps">
+                <div class="wizard-step active" data-step-label="1">1. Identity</div>
+                <div class="wizard-step" data-step-label="2">2. Academics</div>
+                <div class="wizard-step" data-step-label="3">3. Review</div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+                <div class="step-text" id="stepText">Step 1 of 3</div>
+            </div>
+            <div class="onboarding-card">
+                <form id="onboardingForm">
+                    <section class="step-panel" data-step="1">
+                        <div class="grid">
+                            <div class="form-group">
+                                <label for="fullName">Full name</label>
+                                <input id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rollNumber">Roll / enrollment number</label>
+                                <input id="rollNumber" name="rollNumber" required>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="step-panel" data-step="2" hidden>
+                        <div class="grid">
+                            <div class="form-group">
+                                <label for="institutionType">Institution type</label>
+                                <select id="institutionType" name="institutionType">
+                                    <option value="college">College</option>
+                                    <option value="school">School</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="department">Department / branch</label>
+                                <select id="department" name="department" required></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="program">Program / stream</label>
+                                <select id="program" name="program" required></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="year">Year / class</label>
+                                <select id="year" name="year" required></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="division">Division / section</label>
+                                <select id="division" name="division" required></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="practicalBatch">Practical batch</label>
+                                <select id="practicalBatch" name="practicalBatch" required></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="academicYear">Academic year</label>
+                                <select id="academicYear" name="academicYear" required></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="semester">Semester</label>
+                                <select id="semester" name="semester" required></select>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="step-panel" data-step="3" hidden>
+                        <div id="reviewBox" class="demo-hint"></div>
+                    </section>
+                    <div class="button-area action-row">
+                        <button type="button" class="btn btn-outline" id="prevBtn" hidden>Back</button>
+                        <button type="button" class="btn btn-primary" id="nextBtn">Continue</button>
+                        <button type="submit" class="btn btn-primary" id="submitBtn" hidden>Confirm & open timetable</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="../js/demo-store.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/shared.js"></script>
+    <script src="../js/onboarding-flow.js"></script>
+</body>
+</html>

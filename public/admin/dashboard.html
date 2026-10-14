@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard | Smart Scheduler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/workspace.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body data-page="dashboard">
+    <div class="mobile-bar">
+        <strong>Admin</strong>
+        <button class="icon-button" id="sidebarToggle" type="button" aria-label="Open menu">☰</button>
+    </div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="../index.html"><span class="brand-icon">🎓</span><span>Smart Scheduler</span></a>
+            <nav aria-label="Admin">
+                <a class="nav-link active" href="dashboard.html">Overview</a>
+                <a class="nav-link" href="institution.html">Institution</a>
+                <a class="nav-link" href="teachers.html">Teachers</a>
+                <a class="nav-link" href="subjects.html">Subjects</a>
+                <a class="nav-link" href="rooms.html">Rooms</a>
+                <a class="nav-link" href="timetable.html">Timetable</a>
+                <a class="nav-link" href="leaves.html">Leaves <span id="navUnread" class="nav-count">0</span></a>
+                <a class="nav-link" href="../faculty/dashboard.html">Faculty view</a>
+                <a class="nav-link" href="../student/dashboard.html">Student view</a>
+                <a class="nav-link" href="../index.html" id="logoutBtn">Log out</a>
+            </nav>
+            <div class="sidebar-note">Admin can open every role dashboard. Backend still enforces 403 for other roles.</div>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ADMIN</p>
+                    <h1>Institution control room</h1>
+                    <p>Generate conflict-free timetables, manage resources, and approve leave.</p>
+                </div>
+                <div class="app-top-tools">
+                    <div class="bell-wrap">
+                        <button class="bell-button" id="bellButton" type="button" aria-label="Notifications">🔔<span class="bell-dot" id="bellDot"></span></button>
+                        <div class="notif-panel" id="notifPanel"></div>
+                    </div>
+                    <button type="button" class="icon-button" id="themeToggle" aria-label="Toggle theme">◐</button>
+                </div>
+            </header>
+            <div class="stats-grid four">
+                <article class="stat-card"><span>Faculty</span><strong id="statTeachers">0</strong><small>Approved teachers</small></article>
+                <article class="stat-card"><span>Rooms & labs</span><strong id="statRooms">0</strong><small>Capacity-aware allocation</small></article>
+                <article class="stat-card"><span>Subjects</span><strong id="statSubjects">0</strong><small>Theory and practicals</small></article>
+                <article class="stat-card"><span>Leave queue</span><strong id="statLeaves">0</strong><small>Needs reschedule</small></article>
+            </div>
+            <section class="panel generate-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">SCHEDULER</p>
+                        <h2>Generate timetable</h2>
+                        <p>Hard constraints: teacher, room, batch, breaks, lab type. Soft: balanced load and fewer gaps.</p>
+                        <div class="chip-row">
+                            <span class="chip">No double-booked teacher</span>
+                            <span class="chip">Labs only for practicals</span>
+                            <span class="chip">Lunch locked</span>
+                            <span class="chip">Drag-and-drop preview</span>
+                        </div>
+                    </div>
+                    <div class="action-row">
+                        <button class="button primary" id="generateBtn" type="button">Generate timetable</button>
+                        <a class="button secondary" href="timetable.html">Open preview</a>
+                    </div>
+                </div>
+                <div class="kpi-track"><div class="kpi-fill" id="kpiFill"></div></div>
+                <p class="subtle" id="kpiLabel"></p>
+            </section>
+            <section class="content-grid" style="margin-top:18px">
+                <section class="panel">
+                    <h2>Quick setup</h2>
+                    <p>Student onboarding dropdowns are filled from this catalog. Students cannot invent a year or division.</p>
+                    <div class="action-row">
+                        <a class="button secondary" href="institution.html">Institution setup</a>
+                        <a class="button secondary" href="teachers.html">Add faculty</a>
+                        <a class="button secondary" href="subjects.html">Map subjects</a>
+                        <a class="button secondary" href="rooms.html">Add rooms</a>
+                    </div>
+                    <ul class="timeline" style="margin-top:18px">
+                        <li><div><strong>Catalog</strong><p>Departments, batches, rooms</p></div></li>
+                        <li><div><strong>Generate</strong><p>Constraint solver + score</p></div></li>
+                        <li><div><strong>Adjust</strong><p>HTML5 drag-and-drop with live warnings</p></div></li>
+                        <li><div><strong>Publish</strong><p>Students and faculty are notified</p></div></li>
+                    </ul>
+                </section>
+                <section class="panel">
+                    <h2>Today’s focus</h2>
+                    <ul class="item-list">
+                        <li class="list-item"><div><h3>Publish after preview</h3><p>Students only see published slots.</p></div></li>
+                        <li class="list-item"><div><h3>Approve emergency leave</h3><p>The engine substitutes or swaps slots so periods are never empty.</p></div></li>
+                        <li class="list-item"><div><h3>Watch the notification feed</h3><p>Leave, publish, and reschedule events land here.</p></div></li>
+                    </ul>
+                </section>
+            </section>
+            <footer class="app-footer">Admin module · Express API with an offline demo fallback</footer>
+        </main>
+    </div>
+    <script src="../js/demo-store.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/shared.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

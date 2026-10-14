@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Institution | Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/workspace.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body data-page="institution">
+    <div class="mobile-bar"><strong>Institution</strong><button class="icon-button" id="sidebarToggle" type="button" aria-label="Open menu">☰</button></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="dashboard.html"><span class="brand-icon">🎓</span><span>Smart Scheduler</span></a>
+            <nav>
+                <a class="nav-link" href="dashboard.html">Overview</a>
+                <a class="nav-link active" href="institution.html">Institution</a>
+                <a class="nav-link" href="teachers.html">Teachers</a>
+                <a class="nav-link" href="subjects.html">Subjects</a>
+                <a class="nav-link" href="rooms.html">Rooms</a>
+                <a class="nav-link" href="timetable.html">Timetable</a>
+                <a class="nav-link" href="leaves.html">Leaves</a>
+                <a class="nav-link" href="../index.html" id="logoutBtn">Log out</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ADMIN</p>
+                    <h1>Institution & time settings</h1>
+                    <p>These lists power student onboarding dropdowns. Students cannot pick a year or division that does not exist.</p>
+                </div>
+                <button class="icon-button" id="themeToggle" type="button">◐</button>
+            </header>
+            <section class="content-grid">
+                <section class="panel">
+                    <h2>Campus & clock</h2>
+                    <form id="institutionForm" class="form-grid">
+                        <label class="full-width">School / college name<input name="name" required></label>
+                        <label>Day start<input name="startTime" type="time" required></label>
+                        <label>Day end<input name="endTime" type="time" required></label>
+                        <label>Period (minutes)<input name="periodMinutes" type="number" min="30" max="120" required></label>
+                        <label>Lab session (periods)<input name="labSessionPeriods" type="number" min="1" max="4" required></label>
+                        <label>Lunch starts<input name="lunchStart" type="time" required></label>
+                        <label>Lunch ends<input name="lunchEnd" type="time" required></label>
+                        <label>Short break starts<input name="shortBreakStart" type="time" required></label>
+                        <label>Short break ends<input name="shortBreakEnd" type="time" required></label>
+                        <p class="subtle full-width">Working days default to Mon–Sat. Periods are rebuilt from these times; lunch and short break are never scheduled.</p>
+                        <button class="button primary full-width" type="submit">Save settings</button>
+                    </form>
+                </section>
+                <section class="panel">
+                    <h2>Batches (onboarding options)</h2>
+                    <form id="batchForm" class="form-grid">
+                        <label>Department
+                            <select name="departmentId" id="batchDepartment" required></select>
+                        </label>
+                        <label>Year / class<input name="year" required placeholder="3"></label>
+                        <label>Semester<input name="semester" required placeholder="5"></label>
+                        <label>Division<input name="division" list="divisionOptions" required placeholder="A"></label>
+                        <datalist id="divisionOptions">
+                            <option value="A"></option>
+                            <option value="B"></option>
+                            <option value="C"></option>
+                            <option value="D"></option>
+                        </datalist>
+                        <label>Practical batch<input name="practicalBatch" required placeholder="A1"></label>
+                        <label>Students in batch<input name="studentCount" type="number" min="1" placeholder="Optional"></label>
+                        <button class="button secondary full-width" type="submit">Add batch</button>
+                    </form>
+                    <div class="table-wrap" style="margin-top:16px">
+                        <table>
+                            <thead><tr><th>Dept</th><th>Year</th><th>Sem</th><th>Div</th><th>Practical</th><th>Students</th></tr></thead>
+                            <tbody id="batchRows"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+    <script src="../js/demo-store.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/shared.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Faculty Dashboard | Smart Scheduler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/workspace.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body>
+    <div class="mobile-bar"><strong>Faculty</strong><button class="icon-button" id="sidebarToggle" type="button" aria-label="Open menu">☰</button></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="../index.html"><span class="brand-icon">🎓</span><span>Smart Scheduler</span></a>
+            <nav>
+                <a class="nav-link active" href="#overview">Overview</a>
+                <a class="nav-link" href="#timetable">My timetable</a>
+                <a class="nav-link" href="#leave">Emergency leave</a>
+                <a class="nav-link" href="#notifications">Notifications <span id="navUnread" class="nav-count">0</span></a>
+                <a class="nav-link" href="../student/dashboard.html">Student view</a>
+                <a class="nav-link" href="../index.html" id="logoutBtn">Log out</a>
+            </nav>
+            <div class="sidebar-note">Faculty cannot open Admin pages. Sign-up waits for admin approval.</div>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">FACULTY</p>
+                    <h1>Welcome, <span id="userName">Faculty</span></h1>
+                    <p>Your classes, rooms, leave status, and substitutions in one place.</p>
+                </div>
+                <div class="app-top-tools">
+                    <div class="bell-wrap">
+                        <button class="bell-button" id="bellButton" type="button" aria-label="Notifications">🔔<span class="bell-dot" id="bellDot"></span></button>
+                        <div class="notif-panel" id="notifPanel"></div>
+                    </div>
+                    <button class="icon-button" id="themeToggle" type="button">◐</button>
+                </div>
+            </header>
+            <section id="overview" class="panel-section">
+                <div class="stats-grid">
+                    <article class="stat-card"><span>Weekly classes</span><strong id="classCount">0</strong><small>Assigned to you</small></article>
+                    <article class="stat-card"><span>Profile</span><strong id="identityValue">—</strong><small>Qualification</small></article>
+                    <article class="stat-card"><span>Leave</span><strong id="leaveStatus">Open</strong><small>Apply below for emergencies</small></article>
+                </div>
+                <section class="panel">
+                    <div class="panel-heading"><h2>Today</h2><span id="todayLabel" class="date-label"></span></div>
+                    <div id="todayStrip" class="today-strip"></div>
+                </section>
+            </section>
+            <section id="timetable" class="panel-section">
+                <section class="panel">
+                    <h2>Personal timetable</h2>
+                    <p class="subtle">Class, batch, room/lab, time, and subject. Practicals are shown in green.</p>
+                    <div class="table-wrap faculty-week">
+                        <div class="week-grid" id="weekGrid"></div>
+                    </div>
+                    <div class="table-wrap" style="margin-top:18px">
+                        <table>
+                            <thead><tr><th>Day</th><th>Time</th><th>Subject</th><th>Batch</th><th>Room / lab</th></tr></thead>
+                            <tbody id="timetableRows"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+            <section id="leave" class="panel-section">
+                <div class="content-grid leave-layout">
+                    <section class="panel">
+                        <h2>Request emergency leave</h2>
+                        <p class="subtle">Admin will auto-reschedule. Periods are not left empty.</p>
+                        <form id="leaveForm" class="form-grid">
+                            <label>From<input type="date" name="startsOn" required></label>
+                            <label>To<input type="date" name="endsOn" required></label>
+                            <label>Coverage
+                                <select name="periods">
+                                    <option value="full-day">Full day</option>
+                                    <option value="morning">Morning periods</option>
+                                    <option value="afternoon">Afternoon periods</option>
+                                </select>
+                            </label>
+                            <label class="full-width">Reason<textarea name="reason" rows="3" maxlength="500" required placeholder="Conference, medical, family emergency…"></textarea></label>
+                            <button class="button primary full-width" type="submit">Submit leave</button>
+                        </form>
+                    </section>
+                    <section class="panel">
+                        <h2>Status & substitution</h2>
+                        <div id="leaveList" class="item-list"></div>
+                    </section>
+                </div>
+            </section>
+            <section id="notifications" class="panel-section">
+                <section class="panel">
+                    <h2>Notification center</h2>
+                    <div id="notificationList" class="item-list"></div>
+                </section>
+            </section>
+            <footer class="app-footer">Member 1 · Faculty module</footer>
+        </main>
+    </div>
+    <script src="../js/demo-store.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/shared.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/faculty.js"></script>
+</body>
+</html>

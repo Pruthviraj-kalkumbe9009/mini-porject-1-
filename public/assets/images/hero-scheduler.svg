@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="560" viewBox="0 0 720 560" fill="none">
+  <defs>
+    <linearGradient id="backdrop" x1="82" y1="24" x2="636" y2="535" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8F1FF"/>
+      <stop offset="1" stop-color="#F4F0FF"/>
+    </linearGradient>
+    <linearGradient id="card" x1="189" y1="81" x2="548" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#F9FBFF"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="407" y1="145" x2="617" y2="367" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5786FF"/>
+      <stop offset="1" stop-color="#365FE8"/>
+    </linearGradient>
+    <filter id="shadow" x="75" y="31" width="579" height="477" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="14"/>
+      <feGaussianBlur stdDeviation="16"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 .19 0 0 0 0 .31 0 0 0 0 .57 0 0 0 .14 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect x="18" y="17" width="684" height="526" rx="42" fill="url(#backdrop)"/>
+  <circle cx="590" cy="102" r="38" fill="#D7E6FF"/>
+  <circle cx="114" cy="414" r="27" fill="#DBD7FF"/>
+  <path d="M53 463c50-29 94-30 133-5 32 20 65 22 101 4" stroke="#B3C7F9" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 10"/>
+  <g filter="url(#shadow)">
+    <rect x="126" y="81" width="474" height="365" rx="25" fill="url(#card)"/>
+    <path d="M151 81h424a25 25 0 0 1 25 25v47H126v-47a25 25 0 0 1 25-25Z" fill="#fff"/>
+    <circle cx="157" cy="110" r="5" fill="#FF8C8C"/>
+    <circle cx="175" cy="110" r="5" fill="#FFC85C"/>
+    <circle cx="193" cy="110" r="5" fill="#5CC995"/>
+    <rect x="218" y="101" width="127" height="17" rx="8.5" fill="#F1F4FA"/>
+    <rect x="151" y="170" width="192" height="19" rx="8" fill="#192647"/>
+    <rect x="151" y="199" width="132" height="10" rx="5" fill="#A5AEC1"/>
+    <rect x="151" y="236" width="421" height="1" fill="#E8ECF4"/>
+    <rect x="151" y="254" width="421" height="37" rx="9" fill="#F3F6FC"/>
+    <rect x="166" y="266" width="62" height="7" rx="3.5" fill="#A2ADC3"/>
+    <rect x="248" y="263" width="86" height="13" rx="6.5" fill="#DDE7FF"/>
+    <rect x="256" y="266" width="46" height="7" rx="3.5" fill="#4D74E8"/>
+    <rect x="349" y="263" width="74" height="13" rx="6.5" fill="#E7E2FF"/>
+    <rect x="357" y="266" width="37" height="7" rx="3.5" fill="#8065D9"/>
+    <rect x="437" y="263" width="118" height="13" rx="6.5" fill="#DDF5E9"/>
+    <rect x="445" y="266" width="54" height="7" rx="3.5" fill="#32A36B"/>
+    <rect x="151" y="300" width="421" height="37" rx="9" fill="#fff"/>
+    <rect x="166" y="313" width="62" height="7" rx="3.5" fill="#A2ADC3"/>
+    <rect x="248" y="309" width="86" height="13" rx="6.5" fill="#E7E2FF"/>
+    <rect x="256" y="312" width="54" height="7" rx="3.5" fill="#8065D9"/>
+    <rect x="349" y="309" width="74" height="13" rx="6.5" fill="#DDF5E9"/>
+    <rect x="357" y="312" width="36" height="7" rx="3.5" fill="#32A36B"/>
+    <rect x="437" y="309" width="118" height="13" rx="6.5" fill="#DDE7FF"/>
+    <rect x="445" y="312" width="44" height="7" rx="3.5" fill="#4D74E8"/>
+    <rect x="151" y="346" width="421" height="37" rx="9" fill="#F3F6FC"/>
+    <rect x="166" y="359" width="62" height="7" rx="3.5" fill="#A2ADC3"/>
+    <rect x="248" y="355" width="86" height="13" rx="6.5" fill="#DDF5E9"/>
+    <rect x="256" y="358" width="48" height="7" rx="3.5" fill="#32A36B"/>
+    <rect x="349" y="355" width="74" height="13" rx="6.5" fill="#DDE7FF"/>
+    <rect x="357" y="358" width="43" height="7" rx="3.5" fill="#4D74E8"/>
+    <rect x="437" y="355" width="118" height="13" rx="6.5" fill="#E7E2FF"/>
+    <rect x="445" y="358" width="59" height="7" rx="3.5" fill="#8065D9"/>
+  </g>
+  <g>
+    <rect x="415" y="152" width="232" height="223" rx="22" fill="url(#blue)"/>
+    <rect x="438" y="178" width="50" height="50" rx="15" fill="#FFFFFF" fill-opacity=".18"/>
+    <path d="M452 188v8m22-8v8m-24 5h26m-22-16h18a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5h-18a5 5 0 0 1-5-5v-22a5 5 0 0 1 5-5Z" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="438" y="260" fill="#DCE7FF" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">YOUR WEEK, SORTED</text>
+    <text x="438" y="291" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">A smoother</text>
+    <text x="438" y="319" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">school day.</text>
+    <rect x="438" y="340" width="145" height="3" rx="1.5" fill="#AFC4FF"/>
+    <circle cx="603" cy="174" r="5" fill="#B7F3D3"/>
+  </g>
+  <g>
+    <rect x="81" y="124" width="128" height="65" rx="16" fill="#fff"/>
+    <circle cx="105" cy="156" r="12" fill="#E5F8ED"/>
+    <path d="m100 156 4 4 7-8" stroke="#2BA86E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="125" y="151" fill="#69758D" font-family="Arial,sans-serif" font-size="10" font-weight="600">NO CLASHES</text>
+    <text x="125" y="168" fill="#182544" font-family="Arial,sans-serif" font-size="12" font-weight="700">All in sync</text>
+  </g>
+  <g>
+    <rect x="516" y="407" width="135" height="72" rx="17" fill="#fff"/>
+    <circle cx="542" cy="443" r="13" fill="#FFF1D8"/>
+    <path d="M542 436v8l5 3" stroke="#D99218" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="564" y="439" fill="#69758D" font-family="Arial,sans-serif" font-size="10" font-weight="600">MORE TIME</text>
+    <text x="564" y="457" fill="#182544" font-family="Arial,sans-serif" font-size="12" font-weight="700">Less admin</text>
+  </g>
+  <g fill="#6D8FF0">
+    <circle cx="338" cy="72" r="4"/><circle cx="356" cy="72" r="4"/><circle cx="374" cy="72" r="4"/>
+  </g>
+</svg>

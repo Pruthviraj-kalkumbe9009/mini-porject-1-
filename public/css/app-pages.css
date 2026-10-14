@@ -1,0 +1,375 @@
+/* Extra UI for Admin, Faculty, and Student modules */
+.app-top-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bell-wrap {
+    position: relative;
+}
+
+.bell-button {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--app-border);
+    border-radius: 12px;
+    background: var(--app-surface);
+}
+
+.bell-dot {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ef4444;
+}
+
+.notif-panel {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: 20;
+    width: min(360px, 82vw);
+    max-height: 380px;
+    overflow: auto;
+    padding: 12px;
+    border: 1px solid var(--app-border);
+    border-radius: 14px;
+    background: var(--app-surface);
+    box-shadow: var(--app-shadow);
+    display: none;
+}
+
+.notif-panel.open {
+    display: grid;
+    gap: 8px;
+}
+
+.week-grid {
+    display: grid;
+    grid-template-columns: 90px repeat(6, minmax(120px, 1fr));
+    gap: 8px;
+    min-width: 820px;
+}
+
+.week-cell,
+.week-head,
+.week-time {
+    min-height: 78px;
+    padding: 8px;
+    border: 1px dashed var(--app-border);
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.schedule-panel {
+    margin-bottom: 18px;
+    background:
+        radial-gradient(circle at 95% 0, rgba(54, 95, 232, .09), transparent 34%),
+        var(--app-surface);
+}
+
+.schedule-panel .panel-heading h2,
+.timetable-panel-heading h2 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.schedule-panel .panel-heading p:not(.eyebrow) {
+    margin: 6px 0 0;
+    font-size: .82rem;
+}
+
+.schedule-badge {
+    flex: 0 0 auto;
+    padding: 7px 11px;
+    border: 1px solid #d8e3ff;
+    border-radius: 999px;
+    background: #eff4ff;
+    color: #365fe8;
+    font-size: .72rem;
+    font-weight: 600;
+}
+
+.schedule-form {
+    margin-top: 18px;
+}
+
+.schedule-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.schedule-actions .subtle {
+    margin: 0;
+}
+
+.timetable-panel-heading {
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.timetable-panel-heading .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    justify-content: flex-end;
+}
+
+.break-row {
+    grid-column: 1 / -1;
+    display: flex;
+    min-height: 34px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #f1d9a3;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #fff8e8, #fffdf7);
+    color: #805b14;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.break-row.short-break {
+    border-color: #c9e8f4;
+    background: linear-gradient(90deg, #effaff, #f8fdff);
+    color: #23677d;
+}
+
+.week-cell.closed-period {
+    border-style: solid;
+    background: #f3f5f9;
+}
+
+.week-cell.closed-period::after {
+    content: "Not a working day";
+    display: block;
+    padding-top: 14px;
+    color: var(--app-muted);
+    font-size: .65rem;
+    text-align: center;
+}
+
+.schedule-summary {
+    margin: 12px 0 0;
+    color: var(--app-muted);
+    font-size: .8rem;
+}
+
+.week-head,
+.week-time {
+    min-height: auto;
+    border-style: solid;
+    background: transparent;
+    font-size: .78rem;
+    font-weight: 600;
+    color: var(--app-muted);
+}
+
+.week-cell.drop-over {
+    border-color: var(--app-primary);
+    background: #eef3ff;
+}
+
+.slot-card {
+    cursor: grab;
+    padding: 8px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #365fe8, #244bd0);
+    color: #fff;
+    font-size: .74rem;
+    box-shadow: 0 5px 12px rgba(28, 49, 89, .16);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.slot-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(28, 49, 89, .22);
+}
+
+.slot-card.practical {
+    background: linear-gradient(180deg, #0f9f6e, #0b7a54);
+}
+
+.slot-card small {
+    display: block;
+    opacity: .85;
+}
+
+.conflict-banner {
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #fff4d6;
+    color: #875e00;
+    font-size: .84rem;
+}
+
+.conflict-banner[hidden] {
+    display: none;
+}
+
+body.dark .schedule-badge {
+    border-color: #30466e;
+    background: #1e3354;
+    color: #c8ddff;
+}
+
+body.dark .break-row {
+    border-color: #66532e;
+    background: #2a261d;
+    color: #f3d99c;
+}
+
+body.dark .break-row.short-break {
+    border-color: #2b5363;
+    background: #192a32;
+    color: #a9deee;
+}
+
+body.dark .week-cell.closed-period {
+    background: #111a29;
+}
+
+.pager {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 12px;
+}
+
+.kpi-track {
+    height: 8px;
+    border-radius: 999px;
+    background: #e8eef8;
+    overflow: hidden;
+}
+
+.kpi-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #365fe8, #06b6d4);
+}
+
+.wizard-steps {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.wizard-step {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    background: #eef2ff;
+    color: #365fe8;
+    font-size: .8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wizard-step.done,
+.wizard-step.active {
+    background: #365fe8;
+    color: #fff;
+}
+
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.demo-hint {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #edf4ff;
+    color: #1f438e;
+    font-size: .78rem;
+}
+
+.today-strip {
+    display: grid;
+    gap: 10px;
+}
+
+.today-card {
+    display: grid;
+    grid-template-columns: 90px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid var(--app-border);
+    border-radius: 12px;
+}
+
+.action-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.table-actions button {
+    margin-right: 6px;
+}
+
+body.dark .week-cell {
+    background: #152033;
+}
+
+body.dark .demo-hint,
+body.dark .wizard-step {
+    background: #1e3354;
+    color: #c8ddff;
+}
+
+.constraint-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.constraint-card h3 { margin: 0 0 8px; }
+.constraint-card ul { margin: 0; padding-left: 18px; color: var(--app-muted); }
+.landing-demo {
+    display: grid;
+    gap: 8px;
+    margin: 16px 0 0;
+    padding: 16px;
+    border-radius: 16px;
+    background: #101a33;
+    color: #dbe7ff;
+    font-size: .85rem;
+}
+.landing-demo code { color: #9ec1ff; }
+.faculty-week { margin-top: 12px; }
+.generate-panel {
+    background:
+        radial-gradient(circle at 90% 10%, rgba(54,95,232,.16), transparent 40%),
+        var(--app-surface);
+}
+
+@media (max-width: 900px) {
+    .role-grid,
+    .constraint-grid {
+        grid-template-columns: 1fr;
+    }
+    .today-card {
+        grid-template-columns: 1fr;
+    }
+    .schedule-panel .panel-heading,
+    .timetable-panel-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .timetable-panel-heading .chip-row {
+        justify-content: flex-start;
+    }
+}

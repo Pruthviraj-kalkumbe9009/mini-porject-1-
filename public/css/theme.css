@@ -1,0 +1,291 @@
+:root {
+    color-scheme: light;
+}
+
+:root.dark {
+    color-scheme: dark;
+}
+
+html.dark body {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --text: #e5e7eb;
+    --muted: #aab5c5;
+    --border: #334155;
+    --shadow: 0 12px 32px rgba(0, 0, 0, .28);
+    --app-bg: #0f172a;
+    --app-surface: #1e293b;
+    --app-text: #e5e7eb;
+    --app-muted: #aab5c5;
+    --app-border: #334155;
+    --app-primary: #7c9cff;
+    --app-sidebar: #0b1220;
+    --app-shadow: 0 12px 32px rgba(0, 0, 0, .28);
+    background: var(--bg);
+    color: var(--text);
+}
+
+html.dark body > header:not(.topbar) {
+    border-bottom: 1px solid #263449;
+    background: #111c2e;
+    color: #e5e7eb;
+}
+
+html.dark body > header:not(.topbar) .nav-links a,
+html.dark body > header:not(.topbar) .logo {
+    color: #e5e7eb;
+}
+
+html.dark body.login-page,
+html.dark body.signup-page {
+    background: linear-gradient(135deg, #111c3c, #0e3545) !important;
+}
+
+html.dark .login-card,
+html.dark .signup-card,
+html.dark body.dark .login-card,
+html.dark body.dark .signup-card {
+    border-color: #334155;
+    background: #1e293b !important;
+    color: #e5e7eb;
+}
+
+html.dark .login-card h1,
+html.dark .signup-card h1 {
+    color: #f8fafc !important;
+}
+
+html.dark .login-card p,
+html.dark .signup-card p {
+    color: #b8c4d6 !important;
+}
+
+html.dark body.login-page .form-group label,
+html.dark body.signup-page .form-group label,
+html.dark .options,
+html.dark .signup-text,
+html.dark .login-link {
+    color: #d4deeb;
+}
+
+html.dark body.login-page .form-group input,
+html.dark body.login-page .form-group select,
+html.dark body.signup-page .form-group input,
+html.dark body.signup-page .form-group select,
+html.dark .password-toggle {
+    border-color: #475569;
+    background: #0f172a;
+    color: #f1f5f9;
+}
+
+html.dark body.login-page .demo-hint {
+    background: #172b49;
+    color: #c6dcff !important;
+}
+
+html.dark .panel,
+html.dark .stat-card,
+html.dark .card,
+html.dark .profile-dialog,
+html.dark .notif-panel,
+html.dark .list-item,
+html.dark .today-card,
+html.dark .login-card,
+html.dark .signup-card,
+html.dark .onboarding-card,
+html.dark .hero-stat,
+html.dark .compact-item {
+    border-color: var(--app-border);
+    background-color: var(--app-surface);
+    color: var(--app-text);
+}
+
+html.dark .stat-card span,
+html.dark .stat-card small,
+html.dark .list-item p,
+html.dark .list-item small,
+html.dark .compact-item span,
+html.dark .compact-item small,
+html.dark .profile-list dt,
+html.dark .date-label,
+html.dark .subtle {
+    color: var(--app-muted);
+}
+
+html.dark input:not([type="checkbox"]):not([type="radio"]),
+html.dark select,
+html.dark textarea,
+html.dark .table-tools input,
+html.dark .table-tools select {
+    border-color: var(--app-border);
+    background-color: #111c2e;
+    color: var(--app-text);
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+    color: #8996aa;
+}
+
+html.dark table,
+html.dark th,
+html.dark td {
+    color: var(--app-text);
+}
+
+html.dark th,
+html.dark td {
+    border-color: var(--app-border);
+}
+
+html.dark .button.secondary,
+html.dark .icon-button {
+    border-color: var(--app-border);
+    background: #253248;
+    color: var(--app-text);
+}
+
+html.dark .button.danger {
+    background: #452b34;
+    color: #ffc5ce;
+}
+
+html.dark .status {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+html.dark .status.pending,
+html.dark .status.draft {
+    background: #473919;
+    color: #f5d889;
+}
+
+html.dark .status.approved,
+html.dark .status.published {
+    background: #173d2c;
+    color: #9be4b8;
+}
+
+html.dark .status.rejected {
+    background: #48262b;
+    color: #ffb4bd;
+}
+
+html.dark .week-head,
+html.dark .week-time {
+    color: #b8c4d6;
+}
+
+html.dark .week-cell {
+    border-color: #334155;
+    background: #172235;
+}
+
+html.dark .week-cell.drop-over {
+    border-color: #7c9cff;
+    background: #25385a;
+}
+
+html.dark .conflict-banner {
+    border: 1px solid #695627;
+    background: #302915;
+    color: #f5d889;
+}
+
+html.dark .badge {
+    background: #25385a;
+    color: #c6d5ff;
+}
+
+html.dark .feature-grid .card,
+html.dark .steps .step {
+    border-color: #334155;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .2);
+}
+
+html.dark .hero {
+    background: radial-gradient(ellipse at 78% 42%, #172849 0, transparent 42%),
+        linear-gradient(135deg, #111c32, #0f172a);
+}
+
+html.dark .features,
+html.dark .workflow,
+html.dark .about {
+    background: #111c2e;
+}
+
+html.dark .hero h1,
+html.dark .section-title h2,
+html.dark .about h2 {
+    color: #f1f5f9;
+}
+
+html.dark .about-grid > div:first-child img {
+    box-shadow: 0 22px 50px rgba(0, 0, 0, .3);
+}
+
+html.dark body.onboarding-page {
+    background: linear-gradient(135deg, #111c3c, #0e3545);
+}
+
+html.dark .welcome-card {
+    background: rgba(15, 23, 42, .6);
+}
+
+html.dark .onboarding-card {
+    border: 1px solid #334155;
+    background: #1e293b;
+    color: #e5e7eb;
+}
+
+html.dark .onboarding-card .form-group label {
+    color: #d4deeb;
+}
+
+html.dark .onboarding-card .form-note {
+    color: #aab5c5;
+}
+
+html.dark .onboarding-card .form-group input,
+html.dark .onboarding-card .form-group select {
+    border-color: #475569;
+    background: #0f172a;
+    color: #f1f5f9;
+}
+
+html.dark .wizard-step {
+    background: #253248;
+    color: #c8ddff;
+}
+
+html.dark .demo-hint {
+    background: #172b49;
+    color: #c6dcff;
+}
+
+html.dark .nav-links.active {
+    border-color: #334155;
+    background: #1e293b;
+}
+
+html.dark .btn-outline {
+    background: #1e293b;
+    color: #c6d5ff;
+}
+
+html.dark .login-header .btn-outline,
+html.dark .signup-header .btn-outline {
+    background: transparent;
+    color: #fff;
+}
+
+html.dark .cta {
+    background: linear-gradient(120deg, #172b68, #194779);
+}
+
+html.dark .copyright {
+    border-color: #334155;
+    background: #0b1220;
+    color: #b8c4d6;
+}

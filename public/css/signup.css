@@ -1,0 +1,19 @@
+/* Signup shares the readable login card treatment. */
+@import url("login.css");
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.signup-header {
+    width: 100%;
+    padding: 12px 0;
+    background: transparent;
+    box-shadow: none;
+    position: static;
+}
+
+.signup-card {
+    max-width: 500px;
+}

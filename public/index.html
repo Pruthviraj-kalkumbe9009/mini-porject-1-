@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Classroom & Timetable Scheduler</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/app-pages.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <script src="js/theme.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="js/ui.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="container nav-container">
+
+            <div class="logo">
+                🎓 Smart Scheduler
+            </div>
+
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav>
+
+                <ul class="nav-links" id="primary-navigation">
+
+                    <li><a href="#roles">Portals</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#workflow">Workflow</a></li>
+                    <li><a href="#about">About</a></li>
+
+                </ul>
+
+            </nav>
+
+            <div class="nav-buttons">
+
+                <button class="btn btn-outline" id="themeToggle" type="button" aria-label="Switch to dark mode">◐</button>
+
+                <a href="login.html" class="btn btn-outline">
+                    Login
+                </a>
+
+                <a href="signup.html" class="btn btn-primary">
+                    Sign Up
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container hero-grid">
+
+            <div class="hero-content">
+
+                <span class="badge">
+                    AI Powered Timetable Scheduler
+                </span>
+
+                <h1>
+
+                    Smart Classroom &
+                    Timetable Scheduler
+
+                </h1>
+
+                <p>
+
+                    Generate conflict-free timetables automatically,
+                    manage classrooms, faculty leaves,
+                    student schedules and notifications
+                    from one intelligent platform.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="signup.html" class="btn btn-primary">
+                        Get Started
+                    </a>
+
+                    <a href="#features" class="btn btn-outline">
+                        Learn More
+                    </a>
+
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat"><strong>0</strong><span>Teacher clashes</span></div>
+                    <div class="hero-stat"><strong>1 click</strong><span>Generate + publish</span></div>
+                    <div class="hero-stat"><strong>3 roles</strong><span>Admin · Faculty · Student</span></div>
+                    <div class="hero-stat"><strong>Live</strong><span>Leave auto-reschedule</span></div>
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="assets/images/hero-scheduler.svg"
+                    alt="Illustration of a weekly timetable with classroom and scheduling cards"
+                    width="720" height="560" fetchpriority="high">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features" id="features">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Powerful Features
+                </h2>
+
+                <p>
+
+                    Everything required to automate classroom
+                    scheduling for schools and colleges.
+
+                </p>
+
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="card">
+
+                    <div class="icon">
+                        📅
+                    </div>
+
+                    <h3>
+                        AI Timetable Generation
+                    </h3>
+
+                    <p>
+
+                        Automatically creates conflict-free
+                        schedules using intelligent algorithms.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="icon">
+                        👨‍🏫
+                    </div>
+
+                    <h3>
+
+                        Faculty Management
+
+                    </h3>
+
+                    <p>
+
+                        Manage teachers,
+                        workloads,
+                        availability
+                        and subjects.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="icon">
+                        🏫
+                    </div>
+
+                    <h3>
+
+                        Classroom Allocation
+
+                    </h3>
+
+                    <p>
+
+                        Allocate classrooms,
+                        laboratories
+                        and practical rooms efficiently.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="icon">
+                        ⏱️
+                    </div>
+
+                    <h3>
+                        Flexible Period Planning
+                    </h3>
+
+                    <p>
+
+                        Set theory periods, practical session lengths,
+                        lunch and short breaks around your campus day.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="icon">
+                        🔔
+                    </div>
+
+                    <h3>
+
+                        Instant Notifications
+
+                    </h3>
+
+                    <p>
+
+                        Notify students and faculty
+                        whenever timetable changes.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= WORKFLOW ================= -->
+
+    <section class="workflow" id="workflow">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+
+                    How It Works
+
+                </h2>
+
+            </div>
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="number">1</div>
+
+                    <h3>
+
+                        Admin Adds Data
+
+                    </h3>
+
+                    <p>
+
+                        Faculty,
+                        Subjects,
+                        Rooms,
+                        Departments
+
+                    </p>
+
+                </div>
+
+                <div class="step">
+
+                    <div class="number">2</div>
+
+                    <h3>
+
+                        Generate Timetable
+
+                    </h3>
+
+                    <p>
+
+                        AI Scheduler creates optimized schedules.
+
+                    </p>
+
+                </div>
+
+                <div class="step">
+
+                    <div class="number">3</div>
+
+                    <h3>
+
+                        Publish
+
+                    </h3>
+
+                    <p>
+
+                        Students &
+                        Faculty instantly receive timetable.
+
+                    </p>
+
+                </div>
+
+                <div class="step">
+
+                    <div class="number">4</div>
+
+                    <h3>
+
+                        Auto Reschedule
+
+                    </h3>
+
+                    <p>
+
+                        Faculty leave automatically updates timetable.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ROLES ================= -->
+
+    <section class="features" id="roles">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Three secure portals</h2>
+
+                <p>Role-based access is enforced on the backend. The UI only hides what you should not see.</p>
+
+            </div>
+
+            <div class="role-grid">
+
+                <article class="card">
+                    <div class="icon">🛡️</div>
+                    <h3>Admin</h3>
+                    <p>Manage teachers, subjects and rooms; configure periods and breaks; generate, review and publish timetables.</p>
+                    <a href="login.html" class="btn btn-primary">Admin login</a>
+                </article>
+
+                <article class="card">
+                    <div class="icon">👨‍🏫</div>
+                    <h3>Faculty</h3>
+                    <p>Personal timetable, emergency leave, substitution status. Faculty and student views only.</p>
+                    <a href="login.html" class="btn btn-outline">Faculty login</a>
+                </article>
+
+                <article class="card">
+                    <div class="icon">🎓</div>
+                    <h3>Student</h3>
+                    <p>First login collects academic details once. Every later login opens the batch timetable.</p>
+                    <a href="login.html" class="btn btn-outline">Student login</a>
+                </article>
+
+            </div>
+
+            <div class="constraint-grid" style="margin-top:28px">
+                <article class="card constraint-card">
+                    <h3>Hard constraints</h3>
+                    <ul>
+                        <li>A teacher cannot be in two rooms at once</li>
+                        <li>A room or lab cannot host two classes at once</li>
+                        <li>A batch cannot have two classes at once</li>
+                        <li>No class during lunch or short breaks</li>
+                        <li>Practicals only in labs, capacity respected</li>
+                    </ul>
+                </article>
+                <article class="card constraint-card">
+                    <h3>Try the Member 1 UI</h3>
+                    <div class="landing-demo">
+                        Admin: <code>admin@smart.edu</code> / Admin@123<br>
+                        Faculty: <code>faculty@smart.edu</code> / Faculty@123<br>
+                        Returning student: <code>student@smart.edu</code> / Student@123<br>
+                        First-time student: <code>newstudent@smart.edu</code> / Student@123
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="container about-grid">
+
+            <div>
+
+                <img src="assets/images/dashboard-preview.svg"
+                    alt="Preview of the Smart Scheduler dashboard showing classes, timetable, and notifications"
+                    width="720" height="480" loading="lazy">
+
+            </div>
+
+            <div>
+
+                <h2>
+
+                    Why Choose Smart Scheduler?
+
+                </h2>
+
+                <p>
+
+                    Traditional timetable preparation is time consuming,
+                    error-prone and difficult to modify.
+
+                </p>
+
+                <p>
+
+                    Our system automates timetable generation,
+                    classroom allocation,
+                    faculty leave management,
+                    conflict detection,
+                    notifications
+                    and student timetable access.
+
+                </p>
+
+                <a href="signup.html" class="btn btn-primary">
+
+                    Start Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <h2>
+
+                Ready to Transform Your Institution?
+
+            </h2>
+
+            <p>
+
+                Start using Smart Classroom &
+                Timetable Scheduler today.
+
+            </p>
+
+            <a href="signup.html" class="btn btn-light">
+
+                Create Free Account
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container footer-container">
+
+            <div>
+
+                <h3>
+
+                    Smart Scheduler
+
+                </h3>
+
+                <p>
+
+                    AI Based Classroom &
+                    Timetable Management System.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Quick Links
+
+                </h4>
+
+                <ul>
+
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#features">Features</a></li>
+
+                    <li><a href="#about">About</a></li>
+
+                    <li><a href="login.html">Login</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Contact
+
+                </h4>
+
+                <p>
+
+                    support@smartscheduler.com
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 Smart Classroom &
+            Timetable Scheduler.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

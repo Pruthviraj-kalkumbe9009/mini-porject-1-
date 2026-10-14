@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rooms | Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/workspace.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body data-page="rooms">
+    <div class="mobile-bar"><strong>Rooms</strong><button class="icon-button" id="sidebarToggle" type="button" aria-label="Open menu">☰</button></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="dashboard.html"><span class="brand-icon">🎓</span><span>Smart Scheduler</span></a>
+            <nav>
+                <a class="nav-link" href="dashboard.html">Overview</a>
+                <a class="nav-link" href="institution.html">Institution</a>
+                <a class="nav-link" href="teachers.html">Teachers</a>
+                <a class="nav-link" href="subjects.html">Subjects</a>
+                <a class="nav-link active" href="rooms.html">Rooms</a>
+                <a class="nav-link" href="timetable.html">Timetable</a>
+                <a class="nav-link" href="leaves.html">Leaves</a>
+                <a class="nav-link" href="../index.html" id="logoutBtn">Log out</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ADMIN</p>
+                    <h1>Rooms & labs</h1>
+                    <p>Classrooms for theory, laboratories for practicals, with capacity checks in the solver.</p>
+                </div>
+                <button class="icon-button" id="themeToggle" type="button">◐</button>
+            </header>
+            <section class="content-grid">
+                <section class="panel">
+                    <h2>Add / edit room</h2>
+                    <form id="resourceForm" class="form-grid">
+                        <input type="hidden" name="id">
+                        <label>Room code<input name="code" required></label>
+                        <label>Capacity<input name="capacity" type="number" min="1" required></label>
+                        <label class="full-width">Type
+                            <select name="type">
+                                <option value="classroom">Classroom (theory)</option>
+                                <option value="laboratory">Laboratory (practical)</option>
+                                <option value="lecture_hall">Lecture hall</option>
+                            </select>
+                        </label>
+                        <button class="button primary full-width" type="submit">Save room</button>
+                    </form>
+                </section>
+                <section class="panel">
+                    <div class="table-tools"><input id="tableSearch" type="search" placeholder="Search rooms"></div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Code</th><th>Type</th><th>Capacity</th><th></th></tr></thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div>
+                    <div class="pager">
+                        <button class="button secondary" id="prevPage" type="button">Prev</button>
+                        <span id="pageLabel"></span>
+                        <button class="button secondary" id="nextPage" type="button">Next</button>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+    <script src="../js/demo-store.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/shared.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

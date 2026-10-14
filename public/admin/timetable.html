@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timetable | Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/workspace.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body data-page="timetable">
+    <div class="mobile-bar"><strong>Timetable</strong><button class="icon-button" id="sidebarToggle" type="button" aria-label="Open menu">☰</button></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="dashboard.html"><span class="brand-icon">🎓</span><span>Smart Scheduler</span></a>
+            <nav>
+                <a class="nav-link" href="dashboard.html">Overview</a>
+                <a class="nav-link" href="institution.html">Institution</a>
+                <a class="nav-link" href="teachers.html">Teachers</a>
+                <a class="nav-link" href="subjects.html">Subjects</a>
+                <a class="nav-link" href="rooms.html">Rooms</a>
+                <a class="nav-link active" href="timetable.html">Timetable</a>
+                <a class="nav-link" href="leaves.html">Leaves</a>
+                <a class="nav-link" href="../index.html" id="logoutBtn">Log out</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ADMIN</p>
+                    <h1>Timetable workspace</h1>
+                    <p>Plan theory and lab sessions around your campus day, then drag classes to open periods. Conflict checks protect faculty, rooms, batches and breaks.</p>
+                </div>
+                <div class="action-row">
+                    <button class="button secondary" id="generateBtn" type="button">Regenerate</button>
+                    <button class="button primary" id="publishBtn" type="button">Publish</button>
+                    <button class="icon-button" id="themeToggle" type="button">◐</button>
+                </div>
+            </header>
+            <div id="conflictBanner" class="conflict-banner" role="alert" aria-live="assertive" hidden></div>
+            <section class="panel schedule-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">DAILY SCHEDULE</p>
+                        <h2>Periods & breaks</h2>
+                        <p>Choose the period length and break windows used by timetable generation.</p>
+                    </div>
+                    <span class="schedule-badge">Saved on this device</span>
+                </div>
+                <form id="scheduleForm" class="form-grid schedule-form">
+                    <label>Day starts<input name="startTime" id="scheduleStart" type="time" required></label>
+                    <label>Day ends<input name="endTime" id="scheduleEnd" type="time" required></label>
+                    <label>Theory period (minutes)<input name="periodMinutes" id="theoryPeriod" type="number" min="30" max="120" step="5" required></label>
+                    <label>Lab session (periods)<input name="labSessionPeriods" id="labPeriods" type="number" min="1" max="4" required></label>
+                    <label>Lunch starts<input name="lunchStart" id="lunchStart" type="time" required></label>
+                    <label>Lunch ends<input name="lunchEnd" id="lunchEnd" type="time" required></label>
+                    <label>Short break starts<input name="shortBreakStart" id="shortBreakStart" type="time" required></label>
+                    <label>Short break ends<input name="shortBreakEnd" id="shortBreakEnd" type="time" required></label>
+                    <div class="schedule-actions full-width">
+                        <p class="subtle">Practical sessions occupy the selected number of consecutive periods and cannot cross a break.</p>
+                        <button class="button primary" type="submit">Save period plan</button>
+                    </div>
+                </form>
+            </section>
+            <section class="panel">
+                <div class="panel-heading timetable-panel-heading">
+                    <div>
+                        <p class="eyebrow">WEEKLY VIEW</p>
+                        <h2>Class schedule</h2>
+                    </div>
+                    <div class="chip-row">
+                    <span class="chip">Blue = theory</span>
+                    <span class="chip">Green = practical / lab</span>
+                    <span class="chip">Break rows are blocked</span>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <div class="week-grid" id="weekGrid"></div>
+                </div>
+                <p id="scheduleSummary" class="schedule-summary" aria-live="polite"></p>
+            </section>
+        </main>
+    </div>
+    <script src="../js/demo-store.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/shared.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

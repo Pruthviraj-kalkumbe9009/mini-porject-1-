@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Teachers | Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/workspace.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body data-page="teachers">
+    <div class="mobile-bar"><strong>Teachers</strong><button class="icon-button" id="sidebarToggle" type="button" aria-label="Open menu">☰</button></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="dashboard.html"><span class="brand-icon">🎓</span><span>Smart Scheduler</span></a>
+            <nav>
+                <a class="nav-link" href="dashboard.html">Overview</a>
+                <a class="nav-link" href="institution.html">Institution</a>
+                <a class="nav-link active" href="teachers.html">Teachers</a>
+                <a class="nav-link" href="subjects.html">Subjects</a>
+                <a class="nav-link" href="rooms.html">Rooms</a>
+                <a class="nav-link" href="timetable.html">Timetable</a>
+                <a class="nav-link" href="leaves.html">Leaves</a>
+                <a class="nav-link" href="../index.html" id="logoutBtn">Log out</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ADMIN</p>
+                    <h1>Faculty directory</h1>
+                    <p>Name, qualification, department, teachable subjects, workload caps, and availability.</p>
+                </div>
+                <button class="icon-button" id="themeToggle" type="button">◐</button>
+            </header>
+            <section class="content-grid">
+                <section class="panel">
+                    <h2>Add / edit teacher</h2>
+                    <form id="resourceForm" class="form-grid">
+                        <input type="hidden" name="id">
+                        <label>Name<input name="name" required maxlength="80"></label>
+                        <label>Email<input name="email" type="email" required></label>
+                        <label>Qualification / degree<input name="qualification" required></label>
+                        <label>Department<select name="departmentId" required></select></label>
+                        <label>Max lectures / day<input name="maxPerDay" type="number" min="1" max="8" value="4" required></label>
+                        <label>Max lectures / week<input name="maxPerWeek" type="number" min="1" max="30" value="16" required></label>
+                        <label class="full-width">Subject IDs they can teach<input name="subjects" placeholder="s1, s3"></label>
+                        <fieldset class="full-width">
+                            <legend>Available days</legend>
+                            <div class="availability-pills">
+                                <label><input type="checkbox" name="day" value="1" checked> Mon</label>
+                                <label><input type="checkbox" name="day" value="2" checked> Tue</label>
+                                <label><input type="checkbox" name="day" value="3" checked> Wed</label>
+                                <label><input type="checkbox" name="day" value="4" checked> Thu</label>
+                                <label><input type="checkbox" name="day" value="5" checked> Fri</label>
+                                <label><input type="checkbox" name="day" value="6"> Sat</label>
+                            </div>
+                        </fieldset>
+                        <button class="button primary full-width" type="submit">Save faculty</button>
+                    </form>
+                </section>
+                <section class="panel">
+                    <div class="panel-heading">
+                        <h2>All faculty</h2>
+                        <div class="table-tools">
+                            <input id="tableSearch" type="search" placeholder="Search name, email, degree">
+                            <select id="tableSort">
+                                <option value="name">Sort by name</option>
+                                <option value="email">Sort by email</option>
+                                <option value="qualification">Sort by degree</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>Name</th><th>Email</th><th>Degree</th><th>Dept</th><th>Load</th><th></th></tr>
+                            </thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div>
+                    <div class="pager">
+                        <button class="button secondary" id="prevPage" type="button">Prev</button>
+                        <span id="pageLabel"></span>
+                        <button class="button secondary" id="nextPage" type="button">Next</button>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+    <script src="../js/demo-store.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/shared.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

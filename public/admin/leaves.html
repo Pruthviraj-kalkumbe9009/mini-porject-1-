@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leaves | Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/workspace.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body data-page="leaves">
+    <div class="mobile-bar"><strong>Leaves</strong><button class="icon-button" id="sidebarToggle" type="button" aria-label="Open menu">☰</button></div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="dashboard.html"><span class="brand-icon">🎓</span><span>Smart Scheduler</span></a>
+            <nav>
+                <a class="nav-link" href="dashboard.html">Overview</a>
+                <a class="nav-link" href="institution.html">Institution</a>
+                <a class="nav-link" href="teachers.html">Teachers</a>
+                <a class="nav-link" href="subjects.html">Subjects</a>
+                <a class="nav-link" href="rooms.html">Rooms</a>
+                <a class="nav-link" href="timetable.html">Timetable</a>
+                <a class="nav-link active" href="leaves.html">Leaves</a>
+                <a class="nav-link" href="../index.html" id="logoutBtn">Log out</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ADMIN</p>
+                    <h1>Leave & substitutions</h1>
+                    <p>Approve emergency leave. The scheduler finds a free qualified substitute, or swaps a slot so the period is never empty.</p>
+                </div>
+                <div class="action-row">
+                    <div class="bell-wrap">
+                        <button class="bell-button" id="bellButton" type="button" aria-label="Notifications">🔔<span class="bell-dot" id="bellDot"></span></button>
+                        <div class="notif-panel" id="notifPanel"></div>
+                    </div>
+                    <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to dark mode">◐</button>
+                </div>
+            </header>
+            <section class="panel">
+                <div class="chip-row" style="margin-bottom:14px">
+                    <span class="chip">Faculty notified</span>
+                    <span class="chip">Affected batches notified</span>
+                    <span class="chip">Change log kept</span>
+                </div>
+                <div id="leaveList" class="item-list"></div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/demo-store.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/shared.js"></script>
+    <script src="../js/shell.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

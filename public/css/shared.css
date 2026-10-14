@@ -1,0 +1,2748 @@
+/* ==========================================================
+   Smart Classroom & Timetable Scheduler
+   shared.css
+   Part 1
+   ----------------------------------------------------------
+   ✓ CSS Variables
+   ✓ Global Buttons
+   ✓ Cards
+   ✓ Form Elements
+   ✓ Inputs
+   ✓ Labels
+   ✓ Badges
+========================================================== */
+
+/* ==========================================================
+   Buttons
+========================================================== */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:12px 24px;
+    border:none;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease;
+    text-decoration:none;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* Primary */
+
+.btn-primary{
+    background:#2563eb;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+
+/* Secondary */
+
+.btn-secondary{
+    background:#64748b;
+    color:#fff;
+}
+
+.btn-secondary:hover{
+    background:#475569;
+}
+
+/* Success */
+
+.btn-success{
+    background:#16a34a;
+    color:#fff;
+}
+
+.btn-success:hover{
+    background:#15803d;
+}
+
+/* Danger */
+
+.btn-danger{
+    background:#dc2626;
+    color:#fff;
+}
+
+.btn-danger:hover{
+    background:#b91c1c;
+}
+
+/* Warning */
+
+.btn-warning{
+    background:#f59e0b;
+    color:#fff;
+}
+
+.btn-warning:hover{
+    background:#d97706;
+}
+
+/* Outline */
+
+.btn-outline{
+    border:2px solid #2563eb;
+    color:#2563eb;
+    background:transparent;
+}
+
+.btn-outline:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* Icon Button */
+
+.btn-icon{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    padding:0;
+}
+
+/* Small */
+
+.btn-sm{
+    padding:8px 16px;
+    font-size:14px;
+}
+
+/* Large */
+
+.btn-lg{
+    padding:15px 35px;
+    font-size:18px;
+}
+
+/* ==========================================================
+   Cards
+========================================================== */
+
+.card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.glass-card{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.4);
+}
+
+.profile-card{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.feature-card{
+    text-align:center;
+}
+
+.dashboard-card{
+    padding:20px;
+}
+
+/* ==========================================================
+   Forms
+========================================================== */
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:20px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+label{
+    margin-bottom:8px;
+    font-weight:600;
+    color:#334155;
+}
+
+/* ==========================================================
+   Inputs
+========================================================== */
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:12px 15px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    outline:none;
+    transition:.3s;
+    font-size:15px;
+    background:#fff;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+}
+
+textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#94a3b8;
+}
+
+/* ==========================================================
+   Checkbox
+========================================================== */
+
+.checkbox-group{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.checkbox-group input{
+    width:18px;
+    height:18px;
+}
+
+/* ==========================================================
+   Radio
+========================================================== */
+
+.radio-group{
+    display:flex;
+    gap:20px;
+}
+
+.radio-group label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+/* ==========================================================
+   Search Box
+========================================================== */
+
+.search-box{
+    position:relative;
+}
+
+.search-box input{
+    padding-left:45px;
+}
+
+.search-box i{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#64748b;
+}
+
+/* ==========================================================
+   Select Box
+========================================================== */
+
+.select-box{
+    position:relative;
+}
+
+.select-box select{
+    appearance:none;
+    cursor:pointer;
+}
+
+.select-box::after{
+    content:"▼";
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:12px;
+    pointer-events:none;
+}
+
+/* ==========================================================
+   Badges
+========================================================== */
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px 12px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.badge-primary{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.badge-success{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.badge-warning{
+    background:#fef3c7;
+    color:#d97706;
+}
+
+.badge-danger{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.badge-info{
+    background:#cffafe;
+    color:#0891b2;
+}
+
+/* ==========================================================
+   Status Tags
+========================================================== */
+
+.status{
+    padding:6px 14px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.status-active{
+    background:#dcfce7;
+    color:#166534;
+}
+
+.status-pending{
+    background:#fef3c7;
+    color:#92400e;
+}
+
+.status-completed{
+    background:#dbeafe;
+    color:#1d4ed8;
+}
+
+.status-cancelled{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+/* ==========================================================
+   Divider
+========================================================== */
+
+.divider{
+    width:100%;
+    height:1px;
+    background:#e5e7eb;
+    margin:25px 0;
+}
+
+/* ==========================================================
+   Avatar
+========================================================== */
+
+.avatar{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.avatar-sm{
+    width:35px;
+    height:35px;
+}
+
+.avatar-lg{
+    width:80px;
+    height:80px;
+}
+
+/* ==========================================================
+   Section Title
+========================================================== */
+
+.section-title{
+    font-size:24px;
+    font-weight:700;
+    color:#1e293b;
+    margin-bottom:20px;
+}
+
+.section-subtitle{
+    color:#64748b;
+    margin-bottom:30px;
+}
+
+/* ==========================================================
+   End of Part 1
+========================================================== */
+/* ==========================================================
+   Smart Classroom & Timetable Scheduler
+   shared.css
+   Part 2
+   ----------------------------------------------------------
+   ✓ Tables
+   ✓ Responsive Tables
+   ✓ Progress Bars
+   ✓ Alerts
+   ✓ Pagination
+   ✓ Statistics Components
+==========================================================*/
+
+
+/* ==========================================================
+   TABLES
+========================================================== */
+
+.table-container{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    margin:25px 0;
+
+}
+
+.table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:900px;
+
+}
+
+.table thead{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+.table th{
+
+    padding:16px;
+
+    text-align:left;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.table td{
+
+    padding:15px;
+
+    border-bottom:1px solid #e5e7eb;
+
+    color:#475569;
+
+    transition:.3s;
+
+}
+
+.table tbody tr{
+
+    transition:.3s;
+
+}
+
+.table tbody tr:hover{
+
+    background:#eff6ff;
+
+}
+
+.table-striped tbody tr:nth-child(even){
+
+    background:#f8fafc;
+
+}
+
+.table-border{
+
+    border:1px solid #e5e7eb;
+
+}
+
+.table-border th,
+
+.table-border td{
+
+    border:1px solid #e5e7eb;
+
+}
+
+.table-center{
+
+    text-align:center;
+
+}
+
+.table-sm th,
+
+.table-sm td{
+
+    padding:10px;
+
+}
+
+.table-lg th,
+
+.table-lg td{
+
+    padding:22px;
+
+}
+
+/* ==========================================================
+   RESPONSIVE TABLE
+========================================================== */
+
+.responsive-table{
+
+    overflow-x:auto;
+
+    scrollbar-width:thin;
+
+}
+
+.responsive-table::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.responsive-table::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:20px;
+
+}
+
+/* ==========================================================
+   PROGRESS BARS
+========================================================== */
+
+.progress-group{
+
+    margin:18px 0;
+
+}
+
+.progress-label{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:10px;
+
+    background:#e2e8f0;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    height:100%;
+
+    width:0%;
+
+    border-radius:30px;
+
+    transition:width .8s ease;
+
+}
+
+.progress-primary{
+
+    background:#2563eb;
+
+}
+
+.progress-success{
+
+    background:#16a34a;
+
+}
+
+.progress-warning{
+
+    background:#f59e0b;
+
+}
+
+.progress-danger{
+
+    background:#dc2626;
+
+}
+
+.progress-info{
+
+    background:#0891b2;
+
+}
+
+/* Circular Progress */
+
+.circle-progress{
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:50%;
+
+    background:conic-gradient(
+
+        #2563eb 0deg,
+
+        #2563eb 270deg,
+
+        #e5e7eb 270deg,
+
+        #e5e7eb 360deg
+
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+}
+
+.circle-progress span{
+
+    width:95px;
+
+    height:95px;
+
+    background:#ffffff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   ALERTS
+========================================================== */
+
+.alert{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    margin:18px 0;
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+.alert-success{
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    border-left:6px solid #16a34a;
+
+}
+
+.alert-warning{
+
+    background:#fef3c7;
+
+    color:#92400e;
+
+    border-left:6px solid #f59e0b;
+
+}
+
+.alert-danger{
+
+    background:#fee2e2;
+
+    color:#991b1b;
+
+    border-left:6px solid #dc2626;
+
+}
+
+.alert-info{
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+    border-left:6px solid #2563eb;
+
+}
+
+/* ==========================================================
+   PAGINATION
+========================================================== */
+
+.pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:30px 0;
+
+}
+
+.pagination button{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#ffffff;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.pagination button:hover{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+.pagination button.active{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+/* ==========================================================
+   STATISTICS COMPONENTS
+========================================================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+    margin:25px 0;
+
+}
+
+.stat-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:#2563eb;
+
+}
+
+.stat-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+}
+
+.stat-title{
+
+    font-size:15px;
+
+    color:#64748b;
+
+}
+
+.stat-value{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+    margin:10px 0;
+
+}
+
+.stat-change{
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.stat-up{
+
+    color:#16a34a;
+
+}
+
+.stat-down{
+
+    color:#dc2626;
+
+}
+
+/* ==========================================================
+   DASHBOARD SUMMARY
+========================================================== */
+
+.summary-box{
+
+    background:linear-gradient(135deg,#2563eb,#0ea5e9);
+
+    color:#ffffff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    margin:30px 0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.summary-box h2{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+.summary-box p{
+
+    opacity:.9;
+
+}
+
+/* ==========================================================
+   End of Part 2
+========================================================== */
+/* ==========================================================
+   Smart Classroom & Timetable Scheduler
+   shared.css
+   Part 3
+   ----------------------------------------------------------
+   ✓ Notification UI
+   ✓ Notification Cards
+   ✓ Toast Messages
+   ✓ Alert Banner
+   ✓ Timeline
+   ✓ Empty State
+   ✓ Status Indicators
+==========================================================*/
+
+
+/* ==========================================================
+   NOTIFICATION CENTER
+========================================================== */
+
+.notification-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    margin:25px 0;
+
+}
+
+.notification-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    padding:20px;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.notification-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.notification-card.unread{
+
+    border-left:5px solid #2563eb;
+
+    background:#f8fbff;
+
+}
+
+.notification-icon{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    font-size:22px;
+
+}
+
+.notification-content{
+
+    flex:1;
+
+}
+
+.notification-title{
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+    margin-bottom:6px;
+
+}
+
+.notification-message{
+
+    color:#64748b;
+
+    line-height:1.6;
+
+}
+
+.notification-time{
+
+    margin-top:10px;
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+}
+
+
+/* ==========================================================
+   NOTIFICATION BADGE
+========================================================== */
+
+.notification-badge{
+
+    position:absolute;
+
+    top:-8px;
+
+    right:-8px;
+
+    min-width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:#ef4444;
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================================
+   NOTIFICATION PANEL
+========================================================== */
+
+.notification-panel{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.notification-header{
+
+    padding:20px;
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.notification-body{
+
+    max-height:420px;
+
+    overflow-y:auto;
+
+}
+
+.notification-body::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.notification-body::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:20px;
+
+}
+
+
+/* ==========================================================
+   LIVE ALERT BANNER
+========================================================== */
+
+.alert-banner{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:18px 25px;
+
+    margin:25px 0;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#2563eb,#0ea5e9);
+
+    color:#ffffff;
+
+    animation:pulseBanner 2.5s infinite;
+
+}
+
+.alert-banner strong{
+
+    font-size:18px;
+
+}
+
+.alert-banner button{
+
+    background:#ffffff;
+
+    color:#2563eb;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+@keyframes pulseBanner{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.01);
+
+    }
+
+}
+
+
+/* ==========================================================
+   TOAST MESSAGES
+========================================================== */
+
+.toast-container{
+
+    position:fixed;
+
+    top:25px;
+
+    right:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    z-index:9999;
+
+}
+
+.toast{
+
+    min-width:320px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    color:#ffffff;
+
+    animation:toastSlide .4s ease;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+.toast-success{
+
+    background:#16a34a;
+
+}
+
+.toast-warning{
+
+    background:#f59e0b;
+
+}
+
+.toast-danger{
+
+    background:#dc2626;
+
+}
+
+.toast-info{
+
+    background:#2563eb;
+
+}
+
+@keyframes toastSlide{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(100px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   TIMELINE
+========================================================== */
+
+.timeline{
+
+    position:relative;
+
+    margin:30px 0;
+
+    padding-left:30px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:10px;
+
+    top:0;
+
+    width:3px;
+
+    height:100%;
+
+    background:#2563eb;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:30px;
+
+    padding-left:25px;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-29px;
+
+    top:6px;
+
+    width:16px;
+
+    height:16px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+}
+
+.timeline-title{
+
+    font-weight:700;
+
+    color:#1e293b;
+
+    margin-bottom:6px;
+
+}
+
+.timeline-time{
+
+    font-size:13px;
+
+    color:#94a3b8;
+
+    margin-bottom:8px;
+
+}
+
+.timeline-description{
+
+    color:#64748b;
+
+    line-height:1.6;
+
+}
+
+
+/* ==========================================================
+   EMPTY STATE
+========================================================== */
+
+.empty-state{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+.empty-state img{
+
+    width:170px;
+
+    margin-bottom:25px;
+
+}
+
+.empty-state h3{
+
+    font-size:24px;
+
+    color:#334155;
+
+    margin-bottom:10px;
+
+}
+
+.empty-state p{
+
+    color:#64748b;
+
+    max-width:450px;
+
+}
+
+
+/* ==========================================================
+   STATUS INDICATORS
+========================================================== */
+
+.status-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    display:inline-block;
+
+    margin-right:8px;
+
+}
+
+.status-online{
+
+    background:#16a34a;
+
+}
+
+.status-offline{
+
+    background:#dc2626;
+
+}
+
+.status-busy{
+
+    background:#f59e0b;
+
+}
+
+.status-away{
+
+    background:#3b82f6;
+
+}
+
+.status-pill{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+}
+
+
+/* ==========================================================
+   ANNOUNCEMENT CARD
+========================================================== */
+
+.announcement-card{
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#1d4ed8,#2563eb);
+
+    color:#ffffff;
+
+    margin:25px 0;
+
+    box-shadow:0 12px 30px rgba(37,99,235,.25);
+
+}
+
+.announcement-card h3{
+
+    margin-bottom:12px;
+
+    font-size:22px;
+
+}
+
+.announcement-card p{
+
+    line-height:1.7;
+
+    opacity:.95;
+
+}
+
+
+/* ==========================================================
+   END OF PART 3
+========================================================== */
+/* ==========================================================
+   Smart Classroom & Timetable Scheduler
+   shared.css
+   Part 4
+   ----------------------------------------------------------
+   ✓ Modal
+   ✓ Confirmation Dialog
+   ✓ Dropdown Menu
+   ✓ User Menu
+   ✓ Avatar Groups
+   ✓ Loading Spinner
+   ✓ Skeleton Loading
+   ✓ Shimmer Effect
+==========================================================*/
+
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+.modal-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(15,23,42,.55);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s ease;
+
+    z-index:1000;
+
+}
+
+.modal-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.modal{
+
+    width:min(550px,95%);
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+    transform:translateY(40px);
+
+    transition:.35s;
+
+}
+
+.modal-overlay.active .modal{
+
+    transform:translateY(0);
+
+}
+
+.modal-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 28px;
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+.modal-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.modal-close{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.2);
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.modal-close:hover{
+
+    background:#ffffff;
+
+    color:#2563eb;
+
+}
+
+.modal-body{
+
+    padding:28px;
+
+    color:#475569;
+
+    line-height:1.7;
+
+}
+
+.modal-footer{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    padding:20px 28px;
+
+    border-top:1px solid #e5e7eb;
+
+}
+
+
+/* ==========================================================
+   CONFIRMATION DIALOG
+========================================================== */
+
+.confirm-dialog{
+
+    text-align:center;
+
+}
+
+.confirm-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 20px;
+
+    font-size:42px;
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+.confirm-title{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.confirm-text{
+
+    color:#64748b;
+
+    margin-bottom:25px;
+
+}
+
+
+/* ==========================================================
+   DROPDOWN MENU
+========================================================== */
+
+.dropdown{
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.dropdown-toggle{
+
+    cursor:pointer;
+
+}
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:110%;
+
+    right:0;
+
+    width:240px;
+
+    background:#ffffff;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(15px);
+
+    transition:.3s;
+
+    z-index:500;
+
+}
+
+.dropdown.active .dropdown-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.dropdown-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 20px;
+
+    text-decoration:none;
+
+    color:#334155;
+
+    transition:.25s;
+
+}
+
+.dropdown-menu a:hover{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+}
+
+
+/* ==========================================================
+   USER MENU
+========================================================== */
+
+.user-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+}
+
+.user-menu img{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.user-name{
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+.user-role{
+
+    font-size:13px;
+
+    color:#64748b;
+
+}
+
+
+/* ==========================================================
+   AVATAR GROUP
+========================================================== */
+
+.avatar-group{
+
+    display:flex;
+
+}
+
+.avatar-group img{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #ffffff;
+
+    margin-left:-12px;
+
+    transition:.3s;
+
+}
+
+.avatar-group img:first-child{
+
+    margin-left:0;
+
+}
+
+.avatar-group img:hover{
+
+    transform:translateY(-6px);
+
+    z-index:2;
+
+}
+
+
+/* ==========================================================
+   LOADING SPINNER
+========================================================== */
+
+.loader{
+
+    width:60px;
+
+    height:60px;
+
+    border:6px solid #e2e8f0;
+
+    border-top:6px solid #2563eb;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin:auto;
+
+}
+
+.loader-sm{
+
+    width:35px;
+
+    height:35px;
+
+    border-width:4px;
+
+}
+
+.loader-lg{
+
+    width:80px;
+
+    height:80px;
+
+    border-width:8px;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   SKELETON LOADING
+========================================================== */
+
+.skeleton{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#e5e7eb;
+
+    border-radius:10px;
+
+}
+
+.skeleton.text{
+
+    width:100%;
+
+    height:18px;
+
+    margin-bottom:10px;
+
+}
+
+.skeleton.title{
+
+    width:60%;
+
+    height:28px;
+
+}
+
+.skeleton.avatar{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+}
+
+.skeleton.card{
+
+    width:100%;
+
+    height:220px;
+
+    border-radius:18px;
+
+}
+
+
+/* ==========================================================
+   SHIMMER EFFECT
+========================================================== */
+
+.skeleton::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-150px;
+
+    width:150px;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.6),
+
+        transparent
+
+    );
+
+    animation:shimmer 1.6s infinite;
+
+}
+
+@keyframes shimmer{
+
+    from{
+
+        left:-150px;
+
+    }
+
+    to{
+
+        left:100%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   LOADING OVERLAY
+========================================================== */
+
+.loading-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.8);
+
+    backdrop-filter:blur(4px);
+
+    z-index:2000;
+
+}
+
+.loading-overlay.hidden{
+
+    display:none;
+
+}
+
+
+/* ==========================================================
+   END OF PART 4
+========================================================== */
+/* ==========================================================
+   Smart Classroom & Timetable Scheduler
+   shared.css
+   Part 5 (Final)
+   ----------------------------------------------------------
+   ✓ Utility Classes
+   ✓ Flex/Grid Helper Classes
+   ✓ Spacing Utilities
+   ✓ Typography Utilities
+   ✓ Color Utilities
+   ✓ Border & Shadow Utilities
+   ✓ Responsive Helper Classes
+   ✓ Dark Mode Shared Styles
+   ✓ Common Animations
+   ✓ Print Styles
+   ✓ Accessibility Helpers
+==========================================================*/
+
+
+/* ==========================================================
+   FLEX UTILITIES
+========================================================== */
+
+.d-flex{
+    display:flex;
+}
+
+.flex-column{
+    flex-direction:column;
+}
+
+.flex-wrap{
+    flex-wrap:wrap;
+}
+
+.align-center{
+    align-items:center;
+}
+
+.align-start{
+    align-items:flex-start;
+}
+
+.align-end{
+    align-items:flex-end;
+}
+
+.justify-center{
+    justify-content:center;
+}
+
+.justify-between{
+    justify-content:space-between;
+}
+
+.justify-around{
+    justify-content:space-around;
+}
+
+.justify-evenly{
+    justify-content:space-evenly;
+}
+
+.gap-5{gap:5px;}
+.gap-10{gap:10px;}
+.gap-15{gap:15px;}
+.gap-20{gap:20px;}
+.gap-30{gap:30px;}
+.gap-40{gap:40px;}
+
+
+/* ==========================================================
+   GRID UTILITIES
+========================================================== */
+
+.d-grid{
+    display:grid;
+}
+
+.grid-2{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.grid-3{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.grid-4{
+    grid-template-columns:repeat(4,1fr);
+}
+
+.grid-auto{
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.grid-center{
+    place-items:center;
+}
+
+
+/* ==========================================================
+   SPACING UTILITIES
+========================================================== */
+
+.m-0{margin:0;}
+.mt-10{margin-top:10px;}
+.mt-20{margin-top:20px;}
+.mt-30{margin-top:30px;}
+.mt-40{margin-top:40px;}
+
+.mb-10{margin-bottom:10px;}
+.mb-20{margin-bottom:20px;}
+.mb-30{margin-bottom:30px;}
+.mb-40{margin-bottom:40px;}
+
+.ml-auto{
+    margin-left:auto;
+}
+
+.mr-auto{
+    margin-right:auto;
+}
+
+.p-10{padding:10px;}
+.p-20{padding:20px;}
+.p-30{padding:30px;}
+.p-40{padding:40px;}
+
+.pt-20{padding-top:20px;}
+.pb-20{padding-bottom:20px;}
+
+.w-100{
+    width:100%;
+}
+
+.h-100{
+    height:100%;
+}
+
+
+/* ==========================================================
+   TYPOGRAPHY
+========================================================== */
+
+.text-left{
+    text-align:left;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.text-right{
+    text-align:right;
+}
+
+.fw-light{
+    font-weight:300;
+}
+
+.fw-normal{
+    font-weight:400;
+}
+
+.fw-medium{
+    font-weight:500;
+}
+
+.fw-bold{
+    font-weight:700;
+}
+
+.fs-12{font-size:12px;}
+.fs-14{font-size:14px;}
+.fs-16{font-size:16px;}
+.fs-18{font-size:18px;}
+.fs-20{font-size:20px;}
+.fs-24{font-size:24px;}
+.fs-32{font-size:32px;}
+
+.text-uppercase{
+    text-transform:uppercase;
+}
+
+.text-capitalize{
+    text-transform:capitalize;
+}
+
+.text-muted{
+    color:#64748b;
+}
+
+
+/* ==========================================================
+   COLOR UTILITIES
+========================================================== */
+
+.bg-primary{
+    background:#2563eb;
+    color:#fff;
+}
+
+.bg-success{
+    background:#16a34a;
+    color:#fff;
+}
+
+.bg-warning{
+    background:#f59e0b;
+    color:#fff;
+}
+
+.bg-danger{
+    background:#dc2626;
+    color:#fff;
+}
+
+.bg-light{
+    background:#f8fafc;
+}
+
+.bg-white{
+    background:#ffffff;
+}
+
+.text-primary{
+    color:#2563eb;
+}
+
+.text-success{
+    color:#16a34a;
+}
+
+.text-warning{
+    color:#d97706;
+}
+
+.text-danger{
+    color:#dc2626;
+}
+
+
+/* ==========================================================
+   BORDER & SHADOW
+========================================================== */
+
+.rounded{
+    border-radius:10px;
+}
+
+.rounded-lg{
+    border-radius:18px;
+}
+
+.rounded-xl{
+    border-radius:28px;
+}
+
+.rounded-circle{
+    border-radius:50%;
+}
+
+.border{
+    border:1px solid #e2e8f0;
+}
+
+.border-primary{
+    border:2px solid #2563eb;
+}
+
+.shadow-sm{
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.shadow{
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+}
+
+.shadow-lg{
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+}
+
+
+/* ==========================================================
+   RESPONSIVE HELPERS
+========================================================== */
+
+.hide{
+    display:none !important;
+}
+
+.show{
+    display:block !important;
+}
+
+@media(max-width:1200px){
+
+.grid-4{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:992px){
+
+.grid-3,
+.grid-4{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hide-tablet{
+display:none !important;
+}
+
+}
+
+@media(max-width:768px){
+
+.grid-2,
+.grid-3,
+.grid-4{
+grid-template-columns:1fr;
+}
+
+.d-flex{
+flex-direction:column;
+}
+
+.hide-mobile{
+display:none !important;
+}
+
+.text-center-mobile{
+text-align:center;
+}
+
+}
+
+@media(max-width:480px){
+
+.fs-32{
+font-size:26px;
+}
+
+.fs-24{
+font-size:20px;
+}
+
+.btn{
+width:100%;
+}
+
+}
+
+
+/* ==========================================================
+   DARK MODE
+========================================================== */
+
+body.dark{
+
+background:#0f172a;
+
+color:#f8fafc;
+
+}
+
+body.dark .card,
+body.dark .table-container,
+body.dark .notification-card,
+body.dark .modal,
+body.dark .dropdown-menu{
+
+background:#1e293b;
+
+color:#f8fafc;
+
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select{
+
+background:#334155;
+
+border-color:#475569;
+
+color:#fff;
+
+}
+
+body.dark .table td{
+
+border-color:#334155;
+
+}
+
+body.dark .table tbody tr:hover{
+
+background:#334155;
+
+}
+
+body.dark .text-muted{
+
+color:#cbd5e1;
+
+}
+
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+.fade-in{
+
+animation:fadeIn .5s ease;
+
+}
+
+.slide-up{
+
+animation:slideUp .5s ease;
+
+}
+
+.zoom-in{
+
+animation:zoomIn .35s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+
+}
+
+@keyframes slideUp{
+
+from{
+opacity:0;
+transform:translateY(25px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes zoomIn{
+
+from{
+opacity:0;
+transform:scale(.9);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+
+/* ==========================================================
+   PRINT STYLES
+========================================================== */
+
+@media print{
+
+.sidebar,
+.navbar,
+.btn,
+.notification-panel,
+.footer{
+
+display:none !important;
+
+}
+
+body{
+
+background:#ffffff;
+
+}
+
+.card{
+
+box-shadow:none;
+
+border:1px solid #d1d5db;
+
+}
+
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+:focus-visible{
+
+outline:3px solid #2563eb;
+
+outline-offset:2px;
+
+}
+
+.sr-only{
+
+position:absolute;
+
+width:1px;
+
+height:1px;
+
+padding:0;
+
+margin:-1px;
+
+overflow:hidden;
+
+clip:rect(0,0,0,0);
+
+white-space:nowrap;
+
+border:0;
+
+}
+
+.cursor-pointer{
+
+cursor:pointer;
+
+}
+
+.user-select-none{
+
+user-select:none;
+
+}
+
+.overflow-hidden{
+
+overflow:hidden;
+
+}
+
+
+/* ==========================================================
+   END OF SHARED.CSS
+========================================================== */
